@@ -9,4 +9,12 @@ public interface StudentRepository {
 
     boolean save(Student student);
 
+    Student findById(String studentId);
+
+    boolean update(Student student);
+
+    boolean delete(String studentId);
+
+    List<Student> findStudentByName(String studentName);
+
 }

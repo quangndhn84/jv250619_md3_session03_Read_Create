@@ -5,6 +5,6 @@
     <title>Student</title>
 </head>
 <body>
-<a href="StudentServlet">Student Management</a>
+<a href="StudentServlet?action=findAll">Student Management</a>
 </body>
 </html>

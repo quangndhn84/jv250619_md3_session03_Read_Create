@@ -14,6 +14,10 @@
 </head>
 <body>
 <h2>List Students</h2>
+<form action="<%=request.getContextPath()%>/StudentServlet?action=Search" method="post">
+    <input type="text" id="searchName" name="searchName" placeholder="Input student name"/>
+    <input type="submit" value="Search"/>
+</form>
 <table border="1">
     <thead>
     <tr>
@@ -33,7 +37,10 @@
             <td>${student.studentId}</td>
             <td>${student.studentName}</td>
             <td>${student.status?"Active":"Inactive"}</td>
-            <td></td>
+            <td>
+                <a href="<%=request.getContextPath()%>/StudentServlet?action=initUpdate&&studentId=${student.studentId}">Cập nhật</a>
+                <a href="<%=request.getContextPath()%>/StudentServlet?action=Delete&&studentId=${student.studentId}">Xóa</a>
+            </td>
         </tr>
     </c:forEach>
     </tbody>

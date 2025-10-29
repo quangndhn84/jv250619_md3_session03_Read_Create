@@ -23,4 +23,24 @@ public class StudentServiceImp implements StudentService {
     public boolean save(Student student) {
         return studentRepository.save(student);
     }
+
+    @Override
+    public Student findById(String studentId) {
+        return studentRepository.findById(studentId);
+    }
+
+    @Override
+    public boolean update(Student student) {
+        return studentRepository.update(student);
+    }
+
+    @Override
+    public boolean delete(String studentId) {
+        return studentRepository.delete(studentId);
+    }
+
+    @Override
+    public List<Student> findByName(String studentName) {
+        return studentRepository.findStudentByName(studentName);
+    }
 }

@@ -8,4 +8,12 @@ public interface StudentService {
     List<Student> findAll();
 
     boolean save(Student student);
+
+    Student findById(String studentId);
+
+    boolean update(Student student);
+
+    boolean delete(String studentId);
+
+    List<Student> findByName(String studentName);
 }
